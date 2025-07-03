@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional - Bobby Agung Berkat Hulu</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Menggunakan font Inter sebagai font utama */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #cbd5e1;
+        }
+
+        /* Latar Belakang Gradien Animasi */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #0c4a6e, #0284c7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Gaya untuk judul bagian */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #38bdf8;
+            margin: 8px auto 0;
+            border-radius: 2px;
+            transition: width 0.3s ease-in-out;
+        }
+        .section-title:hover::after {
+            width: 100px;
+        }
+
+        /* Tombol Kembali ke Atas */
+        #to-top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Tersembunyi secara default */
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="fixed top-0 left-0 w-full h-full animated-gradient -z-10"></div>
+
+    <nav id="navbar" class="bg-slate-900/80 backdrop-blur-sm p-4 sticky top-0 z-50 transition-shadow duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-extrabold tracking-tight">BOBBY A.B.H.</a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#tentang" class="text-slate-300 hover:text-sky-400 transition-colors">Tentang Saya</a>
+                <a href="#pendidikan" class="text-slate-300 hover:text-sky-400 transition-colors">Pendidikan</a>
+                <a href="#sertifikasi" class="text-slate-300 hover:text-sky-400 transition-colors">Sertifikasi</a>
+                <a href="#projek" class="text-slate-300 hover:text-sky-400 transition-colors">Projek</a>
+                <a href="#keahlian" class="text-slate-300 hover:text-sky-400 transition-colors">Keahlian</a>
+                <a href="#kontak" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105">Kontak</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#tentang" class="block py-2 px-4 text-slate-300 hover:bg-slate-700 rounded">Tentang Saya</a>
+            <a href="#pendidikan" class="block py-2 px-4 text-slate-300 hover:bg-slate-700 rounded">Pendidikan</a>
+            <a href="#sertifikasi" class="block py-2 px-4 text-slate-300 hover:bg-slate-700 rounded">Sertifikasi</a>
+            <a href="#projek" class="block py-2 px-4 text-slate-300 hover:bg-slate-700 rounded">Projek</a>
+            <a href="#keahlian" class="block py-2 px-4 text-slate-300 hover:bg-slate-700 rounded">Keahlian</a>
+            <a href="#kontak" class="block py-2 px-4 text-slate-300 hover:bg-slate-700 rounded">Kontak</a>
+        </div>
+    </nav>
+
+    <header class="container mx-auto px-6 py-20 md:py-32 text-center overflow-hidden">
+        <img data-aos="zoom-in" data-aos-duration="700" src="foto1.jpg" alt="Foto Bobby Agung Berkat Hulu" class="w-60 h-50 mx-auto rounded-full mb-6 border-4 border-slate-700 shadow-lg">
+        <h1 data-aos="fade-up" data-aos-duration="800" class="text-4xl md:text-6xl font-extrabold text-white leading-tight">BOBBY AGUNG BERKAT HULU</h1>
+        <p data-aos="fade-up" data-aos-duration="900" data-aos-delay="200" class="mt-4 text-lg md:text-xl text-sky-300">
+            <span id="typed-text"></span>
+        </p>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <section id="tentang" class="py-20">
+            <h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-center mb-10 text-slate-100 section-title">Tentang Saya</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+                <div data-aos="fade-right" class="md:w-1/3">
+                    <img src="foto2.jpg" alt="Foto Bobby" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div data-aos="fade-left" class="md:w-2/3 bg-slate-800/70 backdrop-blur-sm p-8 rounded-lg shadow-md border border-slate-700">
+                    <p class="text-lg text-left leading-relaxed">
+                        Saya adalah mahasiswa semester 4 Program Studi Manajemen Informatika yang akan segera memasuki semester 5, dengan ketertarikan dalam bidang <span class="font-semibold text-sky-400">Web Development</span>. Saat ini sedang aktif mengembangkan keterampilan di HTML, CSS, dan JavaScript. Memiliki komitmen tinggi untuk terus belajar dan berkembang, serta antusias mencari pengalaman nyata melalui program magang di bidang teknologi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendidikan" class="py-20">
+            <h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-center mb-12 text-slate-100 section-title">Riwayat Pendidikan</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+                <div data-aos="fade-right" data-aos-duration="800" class="md:w-1/2">
+                    <div class="relative border-l-2 border-sky-800 pl-10">
+                        <div data-aos="fade-left" data-aos-delay="200" class="mb-10">
+                            <h3 class="text-xl font-semibold text-white">Politeknik Negeri Medan</h3>
+                            <p class="text-sky-400 text-sm mb-1">2023 - Sekarang</p>
+                            <p class="text-slate-400">D3 Manajemen Informatika</p>
+                        </div>
+                        <div data-aos="fade-left" data-aos-delay="400">
+                            <h3 class="text-xl font-semibold text-white">SMA Negeri 1 Pangkalan Susu</h3>
+                            <p class="text-sky-400 text-sm mb-1">2020 - 2023</p>
+                            <p class="text-slate-400">Jurusan IPA</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="md:w-1/3">
+                    <img src="foto3.jpg" alt="Foto Pendidikan" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </section>
+
+        <section id="sertifikasi" class="py-20">
+            <h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-center mb-12 text-slate-100 section-title">Sertifikasi & Pelatihan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                
+                <div data-aos="fade-up" data-aos-delay="100" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat1.jpg" alt="Sertifikat Google Workspace" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Google Workspace for Education Fundamentals for IT Admins</h3>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="150" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat2.jpg" alt="Sertifikat Premium IT Admin Features" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Premium IT Admin Features</h3>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat3.jpg" alt="Judul Sertifikat 3" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Ancaman Pembobolan Akun Pribadi dan Pencegahan nya</h3>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="250" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat4.jpg" alt="Judul Sertifikat 4" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">AI Engineer For Milenial</h3>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="300" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat5.jpg" alt="Judul Sertifikat 5" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Dasar-dasar Implementasi Kecerdasan Artifisial</h3>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="350" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat6.jpg" alt="Judul Sertifikat 6" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Tips Melindungi Diri DAri Ancaman Phising dan Malware di Era Digital</h3>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="400" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat7.jpg" alt="Judul Sertifikat 7" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Introduction to Cyber Security and Career Awareness</h3>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="450" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat8.jpg" alt="Judul Sertifikat 8" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Ethical Hacker For Dummies</h3>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="500" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat9.jpg" alt="Judul Sertifikat 9" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Dasar-dasar Keamanan AI</h3>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="550" class="group bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+                    <img src="sertifikat10.jpg" alt="Judul Sertifikat 10" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2 flex-grow">Menerapkan rekayasa prompt dengan Azure OpenAI</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="projek" class="py-20">
+            <h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-center mb-16 text-slate-100 section-title">Projek Saya</h2>
+            
+            <div class="max-w-5xl mx-auto flex flex-col gap-16">
+
+                <div data-aos="fade-up" class="bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col md:flex-row group">
+                    <div class="md:w-1/2">
+                        <img src="miinisoccer.jpg" alt="Situs Web Booking Minisoccer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-white mb-3">Website Booking Minisoccer</h3>
+                        <p class="text-slate-400 mb-6">Membuat situs web untuk pemesanan lapangan minisoccer dengan fitur admin dan booking real-time.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" class="bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col md:flex-row-reverse group">
+                    <div class="md:w-1/2">
+                        <img src="billiard.jpg" alt="Situs Web Booking Meja Billiard" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-white mb-3">Website Booking Meja Billiard</h3>
+                        <p class="text-slate-400 mb-6">Situs web ramah pengguna untuk memesan meja billiard standar dan VIP.</p>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" class="bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col md:flex-row group">
+                    <div class="md:w-1/2">
+                        <img src="projekkelompok.jpg" alt="Situs Web Coffee Shop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-white mb-3">Website Coffee Shop (Tim)</h3>
+                        <p class="text-slate-400 mb-6">Projek tim yang menampilkan katalog produk, keranjang belanja, dan sistem pemesanan.</p>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="keahlian" class="py-20">
+            <h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-center mb-12 text-slate-100 section-title">Keahlian Saya</h2>
+            <div class="flex flex-col md:flex-row justify-center items-start gap-16">
+                <div data-aos="fade-right" class="w-full md:w-auto text-center">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Keahlian Teknis</h3>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <div class="flex flex-col items-center gap-2 p-4 bg-slate-800 rounded-lg w-28 transition-transform transform hover:-translate-y-2"><i class="fab fa-html5 fa-3x text-orange-500"></i><span class="font-medium">HTML5</span></div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-slate-800 rounded-lg w-28 transition-transform transform hover:-translate-y-2"><i class="fab fa-css3-alt fa-3x text-blue-500"></i><span class="font-medium">CSS3</span></div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-slate-800 rounded-lg w-28 transition-transform transform hover:-translate-y-2"><i class="fab fa-js-square fa-3x text-yellow-400"></i><span class="font-medium">JavaScript</span></div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-slate-800 rounded-lg w-28 transition-transform transform hover:-translate-y-2"><i class="fab fa-github fa-3x text-white"></i><span class="font-medium">GitHub</span></div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="w-full md:w-1/3 text-center">
+                     <h3 class="text-2xl font-semibold text-white mb-6">Keahlian Non-Teknis</h3>
+                     <div class="space-y-4">
+                        <p class="bg-slate-800 p-3 rounded-lg text-lg transition-all duration-300 hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30">Manajemen Waktu</p>
+                        <p class="bg-slate-800 p-3 rounded-lg text-lg transition-all duration-300 hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30">Penyelesaian Masalah</p>
+                        <p class="bg-slate-800 p-3 rounded-lg text-lg transition-all duration-300 hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30">Kerjasama Tim</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="kontak" class="bg-slate-900/80 pt-16 pb-8 mt-20">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-in">
+            <h2 class="text-3xl font-bold text-white mb-4">Hubungi Saya</h2>
+
+             <div class="flex justify-center space-x-6 mb-10">
+                <a href="mailto:bobbyhulu66@gmail.com" class="text-slate-400 hover:text-sky-400 transition-transform transform hover:-translate-y-1"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="http://www.linkedin.com/in/bobby-agung-berkat-hulu-ba77a0362" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400 transition-transform transform hover:-translate-y-1"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://www.instagram.com/bobbyhulu10" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400 transition-transform transform hover:-translate-y-1"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://github.com/Bobby-hulu9" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400 transition-transform transform hover:-translate-y-1"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            <p class="text-slate-500">&copy; 2025 Bobby Agung Berkat Hulu. </p>
+        </div>
+    </footer>
+
+    <button id="to-top-button" class="bg-sky-500 hover:bg-sky-600 text-white w-12 h-12 rounded-full transition-all duration-300 transform hover:scale-110">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        // Inisialisasi Typed.js
+        new Typed('#typed-text', {
+            strings: ['Mahasiswa Manajemen Informatika', 'Calon Pengembang Web', 'Pecinta Teknologi'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 1500,
+            loop: true
+        });
+
+        // Skrip untuk menu seluler
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        const navLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of navLinks) {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        }
+        
+        // Skrip untuk tombol kembali ke atas dan bayangan navbar
+        const toTopButton = document.getElementById('to-top-button');
+        const navbar = document.getElementById('navbar');
+        window.onscroll = function() {
+            // Tampilkan/sembunyikan tombol
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                toTopButton.style.display = "block";
+            } else {
+                toTopButton.style.display = "none";
+            }
+            // Tambahkan bayangan navbar
+            navbar.classList.toggle("shadow-lg", window.pageYOffset > 50);
+        };
+        toTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
